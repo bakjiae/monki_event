@@ -1,0 +1,136 @@
+@import "common";
+
+//텍스트
+//타이틀: G마켓 산스 적용
+.ttl {
+  font-family: $font-ttl, sans-serif;
+  line-height: 1.2;
+}
+
+//아이콘
+i {
+  &.ic_cta_go {
+    background-image: url("../img/ic_cta_go.png");
+  }
+
+  &.ic_close {
+    background-image: url("../img/ic_x_g.png");
+  }
+
+  &.ic_go {
+    background-image: url("../img/ic_chev_nxt_pl.png");
+  }
+}
+
+//로고
+.logo {
+  width: 100%;
+  background-image: url("../img/logo_main.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 18%;
+  }
+
+  &.bi {
+    background-image: url("../img/logo_footer.png");
+  }
+}
+
+//뱃지
+.bdg {
+  @include font-size(24);
+  display: inline-block;
+  padding: .2em .67em;
+  border: 2px solid currentColor;
+  border-radius: 1.9em;
+  font-weight: 600;
+}
+
+//유의사항
+.note {
+  position: relative;
+
+  &_chk {
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+
+    &_label {
+      @include font-size(26);
+      display: block;
+      border-bottom: .12em solid $gray-300;
+      font-weight: 600;
+      color: $gray-500;
+      cursor: pointer;
+
+      i {
+        background-image: url("../img/ic_chev_btm_g.png");
+      }
+    }
+  }
+
+  &_pop {
+    display: none;
+    @include position(absolute, 3em);
+    @include font-size(20);
+    margin: 0 60px;
+    padding: 1.75em;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    background-color: #ffffff;
+
+    &_head {
+      @include font-size(26);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .close_btn {
+      flex: none;
+      align-self: flex-start;
+      width: auto;
+
+      i {
+        display: block;
+      }
+    }
+  }
+
+  li {
+    display: flex;
+    margin-top: .5em;
+    color: $gray-400;
+
+    &:before {
+      content: "•\00a0";
+    }
+  }
+
+  @include break-media() {
+    &_pop {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+.on {
+  .note {
+    &_chk {
+      &_label {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &_pop {
+      display: block;
+    }
+  }
+}

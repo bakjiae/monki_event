@@ -1,0 +1,283 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>먼키캐시</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- 메인 배너 -->
+  <section class="main_bnr">
+    <div class="main_bnr_inner">
+      <div class="main_bnr_txt">
+        <div class="logo"><span class="blind">먼키캐시</span></div>
+        <h1 class="ttl">Oh 놀라운 5% 적립</h1>
+      </div>
+      <div class="main_bnr_img">
+        <small>먼키지점 최대 5%, 주변맛집 최대 1% 적립</small>
+      </div>
+      <button id="cta_btn" class="cta_btn" tabindex="0"><strong>매월 30,000원 혜택 받기</strong> <i class="ic_cta_go"></i></button>
+    </div>
+  </section>
+  <!-- //메인 배너 -->
+
+  <!-- 서브 배너 -->
+  <section class="sub_bnr">
+    <div class="sub_bnr_inner">
+      <div class="ttl">먼키와 연결된 모든 맛집<br><strong>먼키캐트시 최대 5%적립</strong></div>
+    </div>
+  </section>
+  <!-- //서브 배너 -->
+
+  <!-- 콘텐츠 영역 -->
+  <section class="con">
+
+    <!-- 메뉴 탭 -->
+    <nav class="con_nav">
+      <div class="con_nav_inner">
+        <a href="#con_mb">멤버십 혜택 <span class="blind">바로가기</span></a>
+        <a href="#con_sv">적립 혜택 <span class="blind">바로가기</span></a>
+        <a href="#con_sp">적립 예시 <span class="blind">바로가기</span></a>
+        <a href="#con_mth">적립 방법 <span class="blind">바로가기</span></a>
+        <a href="#con_spz">깜짝 혜택 <span class="blind">바로가기</span></a>
+      </div>
+    </nav>
+    <!-- //메뉴 탭 -->
+
+    <!-- 멤버십 혜택 -->
+    <article id="con_mb" class="con_art mb">
+      <div class="con_art_inner">
+        <div class="con_ttl">
+          <div class="bdg">멤버십 혜택</div>
+          <h2 class="ttl">5직 먼키식구만<br><strong>먼키캐시 혜택</strong></h2>
+          <small>먼키식구란? 먼키앱 회원가입한 멤버십 고객 </small>
+        </div>
+        <div class="mb_list">
+          <ol>
+            <li class="mb_list_li n1">먼키캐시 최대 5%적립</li>
+            <li class="mb_list_li n2">매일 무제한 무료배달</li>
+            <li class="mb_list_li n3">매월 혜택받는 먼키데이</li>
+            <li class="mb_list_li n4">밥값지원금 쿠폰</li>
+            <li class="mb_list_li n5">시즌별 할인이벤트</li>
+          </ol>
+        </div>
+      </div>
+    </article>
+    <!-- //멤버십 혜택 -->
+
+    <!-- 적립 혜택 -->
+    <article id="con_sv" class="con_art sv">
+      <div class="con_art_inner">
+        <div class="con_ttl">
+          <div class="bdg">적립 혜택</div>
+          <h2 class="ttl">현금처럼 차곡차곡<br>놀라운 <strong>최대 5% 적립</strong></h2>
+        </div>
+        <div class="sv_tbl">
+          <table>
+            <thead>
+              <tr>
+                <th><div class="bdg">월 주문금액</div><br><small>예시금액</small></th>
+                <th class="tbl_emp"><div class="bdg">월 적립캐시</div><br><small>먼키지점 이용기준</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>40,000원</td><td class="tbl_emp">2,000C</td></tr>
+              <tr><td>100,000원</td><td class="tbl_emp">5,000C</td></tr>
+              <tr><td>200,000원</td><td class="tbl_emp">10,000C</td></tr>
+              <tr><td>300,000원</td><td class="tbl_emp">15,000C</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sv_bnr">
+          <div class="con_ttl">
+            <small>주문할 때마다 쌓이는 먼키캐시!</small>
+            <h3 class="ttl">먼키와 연결된 맛집 어디서나<br><strong>현금처럼 사용</strong>하세요</h3>
+          </div>
+          <div id="note" class="note">
+            <div class="note_chk" role="button" tabindex="0" onclick="toggleNote('note')">
+              <span class="note_chk_label">먼키캐시 서비스 유의사항 <i></i></span>
+            </div>
+            <div class="note_pop">
+              <div class="note_pop_head">
+                <p>먼키캐시 서비스 유의사항</p>
+                <button class="close_btn" onclick="toggleNote('note')"><i class="ic_close"></i></button>
+              </div>
+              <ul>
+                <li>먼키캐시 1C는 1원으로 계산, 1000C부터 사용 가능</li>
+                <li>먼키와 연결된 먼키지점・주변맛집에서 적립 및 사용 가능</li>
+                <li>먼키지점 먼키앱 주문시 5% 적립 / 키오스크 0% 적립</li>
+                <li>주변맛집 먼키앱・키오스크 주문시 1% or 0.5% 적립</li>
+                <li>무료배달 주문시 적립 0% (먼키캐시 사용 가능)</li>
+                <li>배달비는 먼키가 부담하여 먼키캐시 적립되지 않습니다</li>
+                <li>쿠폰 사용시 먼키캐시 적립 0% (먼키캐시 사용 가능)</li>
+                <li>먼키캐시 유효기간은 적립일로부터 6개월(183일)</li>
+                <li>키오스크 주문시 먼키캐시 사용 불가 (적립 가능)</li>
+                <li>먼키캐시 사용시, 결제한 차액에 대해서만 적립 가능</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- //적립 혜택 -->
+
+    <!-- 적립 예시 -->
+    <article id="con_sp" class="con_art sp">
+      <div class="con_art_inner">
+        <div class="con_ttl">
+          <div class="bdg">적립 예시</div>
+          <h2 class="ttl">매달 30,000원<br>놀라운 <strong>먼키식구 혜택</strong></h2>
+        </div>
+        <div class="sp_tbl">
+          <table>
+            <thead>
+              <tr>
+                <th>매주 2회<br><strong>무료배달 이용</strong> 시</th>
+                <th>매주 3회<br><strong>먼키지점 1만원 이용</strong> 시</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>배달비 3,000원</strong> X <strong>8회</strong></td><td><strong>500C</strong> X <strong>12회</strong></td></tr>
+              <tr class="tbl_sum"><td><strong>24,000원 혜택</strong></td><td><strong>6,000C 혜택</strong><sup>*</sup></td></tr>
+              <tr class="tbl_cou01"><td colspan="2">먼키앱 먼키식구가 되면<br><strong>무료배달 + 먼키캐시</strong></td></tr>
+              <tr class="tbl_cou02"><td colspan="2"><span class="ttl">매달 30,000원 혜택</span></td></tr>
+            </tbody>
+          </table>
+          <p class="sp_tbl_cmt">*먼키지점 5%적립 기준, 1C=1원</p>
+        </div>
+      </div>
+    </article>
+    <!-- //적립 예시 -->
+
+    <!-- 적립 방법 -->
+    <article id="con_mth" class="con_art mth">
+      <div class="con_art_inner">
+        <div class="con_ttl">
+          <div class="bdg">적립 방법</div>
+          <h2 class="ttl">먼키와 연결된<br><strong>모든맛집 & 주문채널</strong></h2>
+        </div>
+        <div class="con_txt">
+          먼키지점 뿐 아니라 내 주변맛집까지<br>
+          먼키앱 뿐 아니라 키오스크 주문까지<br>
+          어디서나 먼키캐시를<br>적립할 수 있어요
+        </div>
+        <div class="con_img"></div>
+      </div>
+    </article>
+    <!-- //적립 방법 -->
+
+    <!-- 깜짝 혜택 -->
+    <article id="con_spz" class="con_art spz">
+      <div class="con_art_inner">
+        <div class="con_ttl">
+          <div class="bdg">깜짝 혜택</div>
+          <h2 class="ttl">하마터면 놓칠뻔<br><strong>매달 쏟아지는 혜택</strong></h2>
+        </div>
+        <div class="con_txt">
+          매달 혜택받는 먼키데이에<br>
+          깜짝 놀랄 이벤트와 쿠폰까지<br>
+          먼키앱에서 가장 먼저<br>확인하세요
+        </div>
+        <div class="con_img"></div>
+      </div>
+    </article>
+    <!-- //깜짝 혜택 -->
+
+  </section>
+  <!-- //콘텐츠 영역 -->
+
+  <!-- 띠배너 -->
+  <section class="strip_bnr">
+    <div class="strip_bnr_inner" role="button" tabindex="0" onclick="window.open('https://monki.net/monkiapp/')">
+      <div><b>5%적립</b>에 <b>무료배달</b>까지.<br><b>더 놀라워진 먼키앱</b> 지금 만나보세요!</div>
+      <div class="strip_bnr_go"><span>바로가기</span> <i class="ic_go"></i></div>
+    </div>
+  </section>
+  <!-- //띠배너 -->
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="footer_inner">
+      <div class="logo bi"></div>
+      <div class="footer_txt">
+        <address>
+          <a href="tel:025552705">TEL. 02.555.2705</a> ㅣ FAX. 02.555.2705<br>
+          <a href="mailto:help@mkitchen.kr">MAIL. help@mkitchen.kr</a>
+        </address>
+        <p class="copyright">COPYRIGHT © 2023.<br>MONKi ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- //푸터 -->
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    //CTA 버튼
+    window.onload = function() {
+      if (window.scrollY !== 0) {
+        document.getElementById('cta_btn').classList.add("on");
+      }
+
+      window.addEventListener("scroll", function() {
+        if (window.scrollY === 0) {
+          document.getElementById('cta_btn').classList.remove("on");
+        } else {
+          document.getElementById('cta_btn').classList.add("on");
+        }
+      });
+    }
+
+    //유의사항 팝업
+    function toggleNote($el) {
+      document.getElementById($el).classList.toggle("on");
+    }
+
+    //탭 on/off
+    const conArt = document.querySelectorAll(".con_art");
+    const conNav = document.querySelectorAll(".con_nav_inner > a");
+
+    window.addEventListener("scroll", () => {
+      let target = "";
+
+      conArt.forEach((item) => {
+        // 아이디가 위치한곳에 도달하기 전에 네비게이션을 on 해주기 위해서 spare 추가
+        const spare = 100;
+        let artLoc =
+          window.scrollY + item.getBoundingClientRect().top - spare;
+
+        if (window.scrollY > artLoc) {
+          target = item.getAttribute("id");
+        }
+
+        conNav.forEach((item) => {
+          item.classList.remove("on");
+          const href = item.getAttribute("href").replace("#", "");
+          if (href === target) {
+            item.classList.add("on");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

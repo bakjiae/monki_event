@@ -1,0 +1,576 @@
+@import "style";
+
+//스크롤 방지
+//모달 on -> .main 에 추가
+.scroll_prevent {
+  overflow: hidden;
+  height: 100vh;
+}
+
+//컨텐츠 정렬
+%content-width {
+  padding: 0 56px;
+  max-width: $break-point*1px;
+  margin: 0 auto;
+
+  @include break-media() {
+    padding: 0 56/$break-point*100vw;
+  }
+}
+
+//메인 배너
+.main_bnr {
+  background: linear-gradient(300deg, #000000 0%, #371300 70%, #8B3000 100%) 0 0;
+  color: #ffffff;
+
+  &_inner {
+    @extend %content-width;
+  }
+
+  &_txt {
+    @include font-size(64);
+    padding-top: (70/$break-point)*100%;
+    font-weight: 800;
+    text-align: center;
+
+    .logo {
+      margin: 0 auto .3em;
+      width: 208/64*1em;
+    }
+  }
+
+  &_img {
+    @include font-size(24);
+    padding-top: 68.5%;
+    padding-bottom: (50/$break-point)*100%;
+    background: url("../img/bnr_main.png") no-repeat top center;
+    background-size: 100% auto;
+    color: rgba(#ffffff, 50%);
+    text-align: center;
+  }
+}
+
+//서브 배너
+.sub_bnr {
+  background-color: $primary;
+
+  &_inner {
+    @extend %content-width;
+    @include font-size(35);
+    text-align: center;
+    color: #ffffff;
+
+    .ttl {
+      padding: (60/$break-point)*100% 0;
+      text-align: center;
+
+      strong {
+        @include font-size(49);
+      }
+    }
+  }
+}
+
+//CTA 버튼
+.cta_btn {
+  z-index: 10;
+  @include position(fixed, null, 0, 0, 0);
+  @include font-size(45);
+  height: 130px;
+  background-color: #000000;
+  font-family: $font_ttl, sans-serif;
+  transition: background-color .3s;
+
+  &.on {
+    background-color: $primary;
+    transition: background-color .3s;
+  }
+
+  @include break-media() {
+    height: 130/$break-point*100vw;
+  }
+}
+
+//콘텐츠 영역
+.con {
+  position: relative;
+
+  //메뉴 탭
+  &_nav {
+    z-index: 5;
+    @include position(sticky, 0, 0, 0);
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(#000000, .16);
+
+    &_inner {
+      @extend %content-width;
+      display: flex;
+      gap: 54px;
+      padding: 0 25px;
+    }
+
+    a {
+      @include font-size(24);
+      display: flex;
+      align-items: center;
+      height: 80px;
+      font-weight: 600;
+
+      &.on {
+        border-bottom: .167em solid currentColor;
+      }
+    }
+
+    @include break-media() {
+      &_inner {
+        justify-content: space-between;
+        gap: 54/$break-point*100vw;
+        padding: 0 25/$break-point*100vw;
+        overflow: auto;
+      }
+
+      a {
+        flex: none;
+        height: 80/$break-point*100vw;
+      }
+    }
+  }
+
+  //콘텐츠 레이아웃
+  &_art {
+    padding: (88/$break-point)*100% 0;
+
+    &_inner {
+      @extend %content-width;
+    }
+  }
+
+  //콘텐츠 타이틀
+  &_ttl {
+    .bdg {
+      margin-bottom: 1em;
+    }
+
+    .ttl {
+      @include font-size(67);
+      font-weight: 800;
+
+      strong {
+        color: $primary;
+      }
+    }
+
+    small {
+      @include font-size(20);
+      font-weight: 500;
+    }
+  }
+
+  //콘텐츠 본문
+  &_txt {
+    @include font-size(32);
+    margin-top: 1em;
+    font-weight: 600;
+  }
+
+  //콘텐츠 이미지
+  &_img {
+    margin-left: auto;
+    max-width: 550px;
+    background-size: contain;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 73%;
+    }
+  }
+}
+
+//멤버십 혜택
+.mb {
+  .con {
+    &_ttl {
+      margin-bottom: 2em;
+    }
+  }
+
+  &_list {
+    counter-reset: counter;
+
+    &_li {
+      @include font-size(36);
+      display: flex;
+      align-items: center;
+      padding-right: 160/36*1em;
+      height: 180px;
+      border-bottom: 1px solid $gray-200;
+      font-weight: 800;
+      background-size: 140/36*1em auto;
+      background-position: center right;
+
+      &:before {
+        counter-increment: counter;
+        content: "0" counter(counter) ".\00a0";
+        font-family: $font-nb, sans-serif;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      @for $i from 1 to 6 {
+        &.n#{$i} {
+          background-image: url("../img/img_benefit_0#{$i}.png");
+        }
+      }
+    }
+
+    @include break-media() {
+      &_li {
+        height: 180/$break-point*100vw;
+      }
+    }
+  }
+}
+
+//적립 혜택
+.sv {
+  background-color: $gray-100;
+
+  .con {
+    &_ttl {
+      margin-bottom: 4em;
+    }
+  }
+
+  &_tbl {
+    margin-bottom: 4em;
+    border: 1px solid $gray-300;
+    border-radius: 20px;
+    background-color: #ffffff;
+
+    table {
+      padding-bottom: 20px;
+      width: 100%;
+    }
+
+    tbody tr:last-child td {
+      padding-bottom: 40px;
+    }
+
+    th, td {
+      padding: 20px;
+      width: 50%;
+      text-align: center;
+    }
+
+    th {
+      padding: 34px 20px;
+
+      &.tbl_emp {
+        .bdg {
+          background-color: $primary;
+        }
+      }
+
+      .bdg {
+        margin-bottom: .46em;
+        padding: .4em 1.3em;
+        border: 0;
+        background-color: $gray-500;
+        color: #ffffff;
+      }
+
+      small {
+        @include font-size(20);
+        font-weight: 500;
+      }
+    }
+
+    td {
+      @include font-size(41);
+      padding: 20px;
+
+      &.tbl_emp {
+        @include font-size(46);
+        font-weight: 800;
+      }
+    }
+
+    .tbl_emp {
+      border-left: 1px solid $gray-300;
+    }
+
+    @include break-media() {
+      tbody tr:last-child td {
+        padding-bottom: 40/$break-point*100vw;
+      }
+
+      td {
+        padding: 20/$break-point*100vw;
+      }
+
+      th {
+        padding: 34/$break-point*100vw 20/$break-point*100vw;
+      }
+    }
+  }
+
+  &_bnr {
+    .con {
+      &_ttl {
+        text-align: center;
+
+        .ttl {
+          @include font-size(50);
+          margin-top: .2em;
+        }
+
+        small {
+          @include font-size(34);
+        }
+      }
+    }
+  }
+}
+
+//적립 예시
+.sp {
+  .con {
+    &_ttl {
+      margin-bottom: 4em;
+    }
+  }
+
+  &_tbl {
+    table {
+      width: 100%;
+    }
+
+    tr {
+      background: url("../img/img_dot_01.png") bottom left repeat-x;
+      background-size: auto 1px;
+    }
+
+    th, td {
+      @include font-size(28);
+      padding: 30px 20px;
+      width: 50%;
+      font-weight: 500;
+      line-height: 1.2;
+      text-align: center;
+
+      strong {
+        font-weight: 800;
+      }
+
+      sup {
+        @include font-size(19);
+        vertical-align: top;
+      }
+    }
+
+    .tbl_sum {
+      background: transparent;
+
+      td:first-child {
+        position: relative;
+
+        &:after {
+          @include position(absolute, 50%, null, 0);
+          content: "";
+          width: 1.67em;
+          height: 1.67em;
+          background: url("../img/img_calc_plus.png") center no-repeat;
+          background-size: contain;
+          transform: translate(50%, -50%);
+        }
+      }
+
+      td {
+        @include font-size(36);
+        padding: 40px 20px;
+      }
+    }
+
+    .tbl_cou01 {
+      position: relative;
+      background: #000000;
+      color: #ffffff;
+
+      td {
+        @include font-size(24);
+        font-weight: 500;
+
+        strong {
+          @include font-size(32);
+          font-weight: 800;
+        }
+      }
+
+      td:after {
+        z-index: 1;
+        @include position(absolute, null, 0, 0, -4px);
+        content: "";
+        height: 8px;
+        background: url("../img/img_dot_02.png") bottom left repeat-x;
+        background-size: auto 100%;
+      }
+    }
+
+    .tbl_cou02 {
+      position: relative;
+      background: $primary;
+      color: #ffffff;
+
+      td {
+        @include font-size(64);
+        font-weight: 800;
+      }
+
+      td:before, td:after {
+        z-index: 1;
+        @include position(absolute, -12px, null);
+        content: "";
+        width: 12px;
+        height: 24px;
+        background: url("../img/img_cou.png") no-repeat;
+        background-size: contain;
+      }
+
+      td:before {
+        left: 0;
+      }
+
+      td:after {
+        right: 0;
+        transform: rotate(180deg);
+      }
+    }
+
+    &_cmt {
+      @include font-size(18);
+      margin-top: .6em;
+      text-align: center;
+    }
+
+    @include break-media() {
+      th, td {
+        padding: 30/$break-point*100vw 20/$break-point*100vw;
+      }
+
+      .tbl_sum {
+        td {
+          padding: 40/$break-point*100vw 20/$break-point*100vw;
+        }
+      }
+    }
+  }
+}
+
+//적립 방법
+.mth {
+  padding-bottom: 0;
+  background-color: $gray-100;
+
+  .con {
+    &_img {
+      background-image: url("../img/img_sec_01.png");
+    }
+  }
+}
+
+
+//깜짝 혜택
+.spz {
+  .con {
+    &_img {
+      background-image: url("../img/img_sec_02.png");
+    }
+  }
+}
+
+//띠 배너
+.strip_bnr {
+  @include font-size(35);
+  background-color: $primary-300;
+  line-height: 1.2;
+
+  &_inner {
+    @extend %content-width;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  &_go {
+    flex: none;
+    align-self: flex-end;
+    @extend .bdg;
+    @include font-size(22);
+    padding: .4em .4em .4em .67em;
+    background-color: #000000;
+    color: $primary-300;
+
+    & > * {
+      vertical-align: middle;
+    }
+
+    i {
+      width: .8em;
+      height: .8em;
+    }
+  }
+
+  @include break-media() {
+    &_inner {
+      padding-top: 28/$break-point*100vw;
+      padding-bottom: 28/$break-point*100vw;
+    }
+  }
+}
+
+//푸터
+.footer {
+  background-color: $gray-100;
+
+  &_inner {
+    @extend %content-width;
+    @include font-size(16);
+    padding-top: 40px;
+    padding-bottom: 280px;
+    color: $gray-400;
+
+    .logo {
+      width: 118/16*1em;
+    }
+  }
+
+  &_txt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1em;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .copyright {
+    @include font-size(10);
+    margin-left: auto;
+    margin-bottom: .25em;
+    text-align: right;
+  }
+
+  @include break-media() {
+    &_inner {
+      padding-top: 40/$break-point*100vw;
+      padding-bottom: 280/$break-point*100vw;
+    }
+  }
+}
