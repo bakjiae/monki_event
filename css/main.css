@@ -758,12 +758,12 @@ i.ic_go {
   }
 }
 .sp_tbl .tbl_cou01 {
-  position: relative;
   background: #000000;
   color: #ffffff;
 }
 .sp_tbl .tbl_cou01 td {
   font-size: 24px;
+  position: relative;
   font-weight: 500;
 }
 @media (max-width: 750px) {
@@ -792,12 +792,12 @@ i.ic_go {
   background-size: auto 100%;
 }
 .sp_tbl .tbl_cou02 {
-  position: relative;
   background: #F56E0B;
   color: #ffffff;
 }
 .sp_tbl .tbl_cou02 td {
   font-size: 64px;
+  position: relative;
   font-weight: 800;
 }
 @media (max-width: 750px) {

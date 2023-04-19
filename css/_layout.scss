@@ -395,12 +395,12 @@
     }
 
     .tbl_cou01 {
-      position: relative;
       background: #000000;
       color: #ffffff;
 
       td {
         @include font-size(24);
+        position: relative;
         font-weight: 500;
 
         strong {
@@ -420,12 +420,12 @@
     }
 
     .tbl_cou02 {
-      position: relative;
       background: $primary;
       color: #ffffff;
 
       td {
         @include font-size(64);
+        position: relative;
         font-weight: 800;
       }
 
