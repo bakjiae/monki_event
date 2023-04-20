@@ -39,6 +39,11 @@ $weights: (Regular: 400);
     @content;
   }
 }
+@mixin mobile-media {
+  @media (max-width: $mobile-point*1px) {
+    @content;
+  }
+}
 
 //반응형 크기
 @mixin font-size($number) {
