@@ -635,9 +635,13 @@
     margin: 0 !important;
   }
 
-  @include break-media() {
-    a {
+  a {
+    @include break-media() {
       font-size: 15/$break-point*100vw !important;
+    }
+
+    @include mobile-media() {
+      font-size: 14px !important;
     }
   }
 }
