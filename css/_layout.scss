@@ -666,6 +666,10 @@
       display: none;
     }
   }
+
+  @include mobile-media() {
+    font-size: 14px !important;
+  }
 }
 //복사
 .clearfix {

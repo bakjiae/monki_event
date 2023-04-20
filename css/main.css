@@ -1035,6 +1035,11 @@ i.ic_go {
     display: none;
   }
 }
+@media (max-width: 430px) {
+  .head_right_btn, .head_right_btn2 {
+    font-size: 14px !important;
+  }
+}
 
 .clearfix {
   zoom: 1;
