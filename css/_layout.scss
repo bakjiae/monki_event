@@ -119,6 +119,10 @@
       &.on {
         border-bottom: .167em solid currentColor;
       }
+
+      @include mobile-media() {
+        font-size: 13.6px;
+      }
     }
 
     @include break-media() {
@@ -133,10 +137,6 @@
         flex: none;
         height: 80/$break-point*100vw;
       }
-    }
-
-    @include mobile-media() {
-      font-size: 13.6px;
     }
   }
 

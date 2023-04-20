@@ -487,6 +487,11 @@ i.ic_go {
 .con_nav a.on {
   border-bottom: 0.167em solid currentColor;
 }
+@media (max-width: 430px) {
+  .con_nav a {
+    font-size: 13.6px;
+  }
+}
 @media (max-width: 750px) {
   .con_nav_inner {
     justify-content: space-between;
@@ -497,11 +502,6 @@ i.ic_go {
   .con_nav a {
     flex: none;
     height: 10.6666666667vw;
-  }
-}
-@media (max-width: 430px) {
-  .con_nav {
-    font-size: 13.6px;
   }
 }
 .con_art {
