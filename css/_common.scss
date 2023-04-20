@@ -215,3 +215,12 @@ pre {
   margin: -1px;
   overflow: hidden;
 }
+
+//
+.mo_only {
+  display: none;
+
+  @include mobile-media() {
+    display: block;
+  }
+}
