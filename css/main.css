@@ -990,9 +990,6 @@ i.ic_go {
 .hd_t {
   position: relative;
 }
-.hd_t:hover .hd_toggle, .hd_t:active .hd_toggle {
-  display: block;
-}
 
 .hd_toggle {
   z-index: 1;
